@@ -1,5 +1,9 @@
 <%= form_for(@article) do |f| %>
   <ul>
+  <p>
+    <%= f.label :tag_list %><br />
+    <%= f.text_field :tag_list %>
+</p>
   <% @article.errors.full_messages.each do |error| %>
     <li><%= error %></li>
   <% end %>
